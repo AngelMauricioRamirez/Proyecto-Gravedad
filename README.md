@@ -7,14 +7,16 @@ El objetivo de esta aplicación es evaluar que tan bien o tan mal se encuentran 
 ## Ejemplo de pseudocódigo
 Variables tiempo_ms = 0, tiempo_s = 0, color = rojo
 
-1 genera numero aleatorio para tiempo_s de un numero entre 2 y 6
-2 mientras tiempo_s >= 0 repite
-3	tiempo_s -= 1
-4	si tiempo_s == 0 evalua
-5		color = verde
-6		mientras no se haga click repite
-7			tiempo_ms += 1
-8		si tiempo_ms < 250 
-9			muestra "Tu tiempo de reaccion esta por arriba del promedio"
-10 	si no, si tiempo_ms > 250
-11		muestra "Tu tiempo de reaccion esta por debajo del promedio"
+ genera numero aleatorio para tiempo_s de un numero entre 2 y 6
+ 
+
+    mientras tiempo_s >= 0 repite
+    	tiempo_s -= 1
+    	si tiempo_s == 0 evalua
+    		color = verde
+    		mientras no se haga click repite
+    			tiempo_ms += 1
+    		si tiempo_ms < 250 
+    			muestra "Tu tiempo de reaccion esta por arriba del promedio"
+     	si no, si tiempo_ms > 250
+    		muestra "Tu tiempo de reaccion esta por debajo del promedio"
