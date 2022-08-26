@@ -1,26 +1,123 @@
-# Minijuego de tiempo de reacción
-El tiempo de reacción es el tiempo en el que el cuerpo reacciona hacia un estímulo físico, visual o auditivo, un buen tiempo de reacción indica que un individuo puede reaccionar de manera rápida ante cualquier situación que se presente de forma inesperada. En los videojuegos, el tiempo de reacción es indispensable para poder mejorar, normalmente los jugadores que tienen mejor tiempo de reacción son jugadores más buenos que el promedio, por lo que para poder mejorar en los videojuegos en general se puede optar por mejorar el tiempo de reacción visual y auditivo.
+# Gravedad de planetas
+
+  
+
+Es curioso |conocer la gravedad de otros planetas para saber cómo se van a comportar si es que el ser humano llega a explorarlos, la gravedad nos puede decir demasiadas cosas sobre el planeta, pero lo más importante es saber cómo es que la masa y las fuerzas van a interactuar con él, la gravedad nos puede decir cual es el peso de las personas si es que llegan a habitarlo, nos puede decir las fuerzas de escape e incluso si nos puede indicar si el planeta es habitable o no.
+
+  
 
 ## Objetivos
-El objetivo de esta aplicación es evaluar que tan bien o tan mal se encuentran los usuarios al reaccionar ante los estímulos visuales y auditivos, si una persona tiene tiempos de reacción muy elevados con respecto al promedio de un humano o con respecto a sus resultados previos, por lo que el usuario puede autoevaluarse mientras juega con esta sencilla aplicación, con esto se intenta hacer que la persona mejore en los videojuegos, ya sea que se los tome de forma casual o competitiva.
 
-## Algoritmo
+  
 
- - La aplicación funcionará de manera que cuando cambie de color el objeto mostrado en pantalla o suene un ruido el usuario tenga que reaccionar lo mas rápido que pueda para medir su tiempo de reacción
+El objetivo de esta aplicación es comparar la gravedad de planetas externos a nuestro sistema y saber cuánta similitud hay en la gravedad obtenida con respecto a los planetas de nuestro sistema solar. Con la información obtenida se puede saber como es la gravedad del planeta ingresado, se puede saber si se parece a la gravedad de la tierra o a la gravedad de cualquier otro planeta dentro de nuestro sistema solar, además, esta información podría ocuparse para simular la caída de un objeto en alguna interfaz gráfica.
 
- - Se genera una una variable de tiempo en segundos la cual ocupará numeros de 2 a 5 de forma aleatoria, esto sirve para que el fondo del objeto cambie de color cuado termine el tiempo generado
+  
 
- - Cuando termina el tiempo en segundos, el fondo del objeto cambiará de color
+## Algoritmo y pseudocodigo
 
- - Cuando el objeto cambia de color, se inicia una variable de tiempo en milisegundos y deja de contarlos una vez que el usuario hace click, el tiempo se guardara en una variable llamada tiempo de racción visual
+  
 
- - La misma variable de tiempo en segundos vuelve a tomar un valor entre 2 y 5 la cual servirá para evaluar el tiempo de reacción auditivo, el cual, en teoría es mucho más rápido que el visual
+Variables:
 
- - Cuando termina el tiempo en segundos, sonará un sonido y los milisegundos empezaran a contar justo cuando se escuche
+EARTH = 9.807
 
- - Cuando el usuario hace click el tiempo se guardará en una variable de tiempo de reacción auditiva
+MARS = 3.721
 
- - Al final la aplicación evaluará si el tiempo de reacción del usuario se encuentra por encima del promedio o por debajo del promedio en los dos tipos de casos, tanto en visual como auditivo
+JUPITER = 24.79
 
- - Las variables de reacción visual y auditiva se van a guardar como si fueran los resultados previos y la siguiente vez que la persona juegue la aplicación evaluará si se mejoró o se empeoró
+SATURN = 10.44
 
+URANUS = 8.87
+
+VENUS = 8.87
+
+NEPTUNE = 11.15
+
+MERCURY = 3.7
+
+planet_gravity
+
+time
+
+distance
+
+similarity
+
+selection
+
+  
+
+## Algoritmo:
+
+-   Se obtiene la selección de lo que el usuario quiere obtener (Si quiere obtener la gravedad del planeta, el tiempo de caída o la distancia)
+    
+-   Se ingresan los datos de lo que se pide ingresar (puede ser tiempo y distancia, gravedad del planeta y tiempo, o gravedad del planeta y distancia)
+    
+-   Si se eligió obtener la gravedad del planeta, indicará su gravedad y su similitud con algún planeta de nuestro sistema solar
+    
+-   Si se eligió obtener el tiempo de caída, se indicará el tiempo en segundos
+    
+-   Si se eligió obtener la distancia de la caída del objeto, se indicará la distancia en metros
+    
+
+  
+
+## Pseudocódigo:
+
+Inicio
+
+1.  Escribir: “Selecciona qué es lo que quieres obtener: \n(1)Obtener la gravedad del planeta \n(2)Obtener el tiempo en el que cae el objeto\n(3)Obtener la distancia de la caída del objeto\n…”
+    
+2.  Leer selection
+    
+3.  Si selection es igual a 1 entonces
+    
+
+4.  Escribir "Proporciona el tiempo en el que cae el objeto: "
+    
+5.  Leer time
+    
+6.  Escribir "Proporciona la altura a la que se encuentra el objeto: "
+    
+7.  Leer distance
+    
+8.  planet_gravity = (2*distance) / math.pow(time, 2)
+    
+9.  similarity = planet_gravity * 100 / Planeta
+    
+10.  Escribir “La gravedad es de “ + planet_gravity + “ y su similitud con Planeta es de 00000”
+    
+
+11.  Si selection es igual a 2 entonces
+    
+
+12.  Escribir "Proporciona la gravedad del planeta: "
+    
+13.  Leer planet_gravity
+    
+14.  Escribir "Proporciona la altura a la que se encuentra el objeto: "
+    
+15.  Leer distance
+    
+16.  time = math.sqrt((distance*2)/planet_gravity)
+    
+17.  Escribir “El tiempo de caída es de “ + time + “ segundos”
+    
+
+18.  Si selection es igual a 3 entonces
+    
+
+19.  Escribir "Proporciona la gravedad del planeta: "
+    
+20.  Leer planet_gravity
+    
+21.  Escribir "Proporciona el tiempo en el que cae el objeto: "
+    
+22.  Leer time
+    
+23.  distance = 0.5 * planet_gravity * math.pow(time, 2)
+    
+24.  Escribir “La distancia de caída del objeto es de “ + distance + “ metros”
+
+fin 
