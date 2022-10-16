@@ -92,10 +92,4 @@ class grv_fun():
             else:
                 break
 
-        matrix_xy =[x, y]
-        print(matrix_xy)
-
-
-
-
-
+        return [x, y]
