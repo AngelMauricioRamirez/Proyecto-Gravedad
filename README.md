@@ -19,3 +19,11 @@ El objetivo de esta aplicación es comparar la gravedad de planetas externos a n
 
 
 El programa funciona con una interfaz grafica modelada con TKinter, la interfaz del programa es muy intuitiva y está pensada para que cualquier persona pueda manipular el código, ademas, el programa cuenta con un graficador para modelar gráficas de proyectiles que se encuentran en tiro parabolico, para esto se utiliza la libreria Matplotlib.
+
+
+
+## Instrucciones para correr el código
+
+
+
+Descargar el zip del código, descomprimirlo y dirigirse a la carpeta Proyecto-Gravedad-main, abrir una terminal en la ruta de la carpeta, descargar los requisitos utilizando el siguiente comando: pip install -r requirements.txt
